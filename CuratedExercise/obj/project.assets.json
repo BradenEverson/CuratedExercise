@@ -1797,6 +1797,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "ExerciseCuration.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ExerciseCuration.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExerciseCuration.Core.dll": {}
+        }
+      },
+      "ExerciseCuration.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ExerciseCuration.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ExerciseCuration.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExerciseCuration.Data.dll": {}
+        }
       }
     }
   },
@@ -6063,10 +6086,21 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "ExerciseCuration.Core/1.0.0": {
+      "type": "project",
+      "path": "../ExerciseCuration.Core/ExerciseCuration.Core.csproj",
+      "msbuildProject": "../ExerciseCuration.Core/ExerciseCuration.Core.csproj"
+    },
+    "ExerciseCuration.Data/1.0.0": {
+      "type": "project",
+      "path": "../ExerciseCuration.Data/ExerciseCuration.Data.csproj",
+      "msbuildProject": "../ExerciseCuration.Data/ExerciseCuration.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "ExerciseCuration.Data >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3"
     ]
   },
@@ -6103,7 +6137,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\brade\\source\\repos\\CuratedExercise\\ExerciseCuration.Data\\ExerciseCuration.Data.csproj": {
+              "projectPath": "C:\\Users\\brade\\source\\repos\\CuratedExercise\\ExerciseCuration.Data\\ExerciseCuration.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
