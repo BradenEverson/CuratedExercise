@@ -62,7 +62,7 @@ namespace ExerciseCuration.Data
             return 0;
         }
 
-        public Exercise generateNewWorkout()
+        public Exercise generateNewWorkout(difficulty difficulty)
         {
             List<bodyGroup> applicableBodyGroups = bodyPrefs.Keys.Where(r => bodyPrefs[r] > staticRandom.Instance.NextDouble()).ToList();
             List<workoutTypes> applicableWorkoutTypes = workoutPrefs.Keys.Where(r => workoutPrefs[r] > staticRandom.Instance.NextDouble()).ToList();
@@ -77,7 +77,7 @@ namespace ExerciseCuration.Data
             {
                 workoutType = applicableWorkoutTypes[staticRandom.Instance.Next(0, applicableWorkoutTypes.Count - 1)];
             }
-            Exercise exercise = new Exercise(bodyGroup,workoutType,timeAmounts,amountRange,staticRandom.Instance.Next(exerciseAmount[0],exerciseAmount[1]), difficulty.intermidiate);
+            Exercise exercise = new Exercise(bodyGroup,workoutType,timeAmounts,amountRange,staticRandom.Instance.Next(exerciseAmount[0],exerciseAmount[1]), difficulty);
             return exercise;
         }
 
