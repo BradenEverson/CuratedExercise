@@ -1,4 +1,4 @@
-﻿using ExerciseCuration.Core;
+using ExerciseCuration.Core;
 using System;
 using System.Collections.Generic;
 using System.Text;
