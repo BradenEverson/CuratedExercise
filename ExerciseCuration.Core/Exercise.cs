@@ -6,8 +6,9 @@ namespace ExerciseCuration.Core
 {
     public class Exercise
     {
-        public string instructions { get; }
-        public workoutTypes workoutType { get; }
+        public int id { get; set; }
+        public string instructions { get; set; }
+        public workoutTypes workoutType { get; set; }
         public int userRating { get; set; }
     }
     public enum workoutTypes
