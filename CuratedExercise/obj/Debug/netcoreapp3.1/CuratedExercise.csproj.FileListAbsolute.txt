@@ -107,3 +107,7 @@ C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\obj\Debug\netcoreapp
 C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\obj\Debug\netcoreapp3.1\CuratedExercise.dll
 C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\obj\Debug\netcoreapp3.1\CuratedExercise.pdb
 C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\obj\Debug\netcoreapp3.1\Razor\Pages\exercise.cshtml.g.cs
+C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\ExerciseCuration.Core.dll
+C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\ExerciseCuration.Data.dll
+C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\ExerciseCuration.Data.pdb
+C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\ExerciseCuration.Core.pdb

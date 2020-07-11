@@ -1,0 +1,11 @@
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\bin\Debug\netcoreapp3.1\ExerciseCuration.Data.deps.json
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\bin\Debug\netcoreapp3.1\ExerciseCuration.Data.dll
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\bin\Debug\netcoreapp3.1\ExerciseCuration.Data.pdb
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\bin\Debug\netcoreapp3.1\ExerciseCuration.Core.dll
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\bin\Debug\netcoreapp3.1\ExerciseCuration.Core.pdb
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netcoreapp3.1\ExerciseCuration.Data.csprojAssemblyReference.cache
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netcoreapp3.1\ExerciseCuration.Data.AssemblyInfoInputs.cache
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netcoreapp3.1\ExerciseCuration.Data.AssemblyInfo.cs
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netcoreapp3.1\ExerciseCuration.Data.csproj.CopyComplete
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netcoreapp3.1\ExerciseCuration.Data.dll
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netcoreapp3.1\ExerciseCuration.Data.pdb

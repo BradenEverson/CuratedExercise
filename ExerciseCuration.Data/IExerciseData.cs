@@ -9,7 +9,8 @@ namespace ExerciseCuration.Data
     {
         public Exercise add(Exercise exercise);
         public Exercise delete(int id);
-        public Exercise update(Exercise updatedExercise);
+        public Exercise generateNewWorkout();
+        public void updateDict(exerciseSnippet target, double increment);
         public Exercise getById(int id);
         public int commit();
     }
