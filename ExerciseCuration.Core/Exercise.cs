@@ -12,7 +12,7 @@ namespace ExerciseCuration.Core
 
         };
         public int id { get; set; }
-        List<exerciseSnippet> exercisesInWorkout { get; }
+        public List<exerciseSnippet> exercisesInWorkout { get; }
         public Exercise(bodyGroup bodyGroup, workoutTypes workoutType, int[] timeRange, int[] amountRange, int exerciseAmount, difficulty difficulty, List<exerciseSnippet> liked, List<exerciseSnippet> disliked)
         {
             for(int i = 0; i < exerciseAmount; i++)
@@ -53,6 +53,11 @@ namespace ExerciseCuration.Core
     {
         beginner,
         intermidiate,
-        advanced
+        advanced,
+        all
+    }
+    public enum goal
+    {
+
     }
 }

@@ -86,7 +86,7 @@ namespace ExerciseCuration.Data
         public void updateDict(exerciseSnippet target, double increment)
         {
             workoutPrefs[target.workoutType] += increment*workoutHistory.Where(r => r == target.workoutType).Count();
-            bodyPrefs[target.bodyGroup] += increment * bodyGroupHistory.Where(r => r == target.bodyGroup).Count();
+            //bodyPrefs[target.bodyGroup] += increment * bodyGroupHistory.Where(r => r == target.bodyGroup).Count();
             if(increment > 0)
             {
                 likedExercises.Add(target);
