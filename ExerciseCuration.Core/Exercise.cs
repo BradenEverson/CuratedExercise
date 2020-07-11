@@ -58,6 +58,8 @@ namespace ExerciseCuration.Core
     }
     public enum goal
     {
-
+        LoseWeight,
+        MaintainWeightandTone,
+        GainWeightMuscle
     }
 }
