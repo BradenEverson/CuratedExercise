@@ -11,7 +11,9 @@ namespace ExerciseCuration.Data
         public int[] timeAmounts = { 15, 60 };
         public int[] amountRange = { 5, 30};
         public int[] exerciseAmount = { 5, 10 };
-        private Dictionary<workoutTypes, double> workoutPrefs = new Dictionary<workoutTypes, double>()
+        private List<exerciseSnippet> likedExercises = new List<exerciseSnippet>();
+        private List<exerciseSnippet> dislikedExercises = new List<exerciseSnippet>();
+        private readonly Dictionary<workoutTypes, double> workoutPrefs = new Dictionary<workoutTypes, double>()
         {
             {workoutTypes.ActiveRecovery, 0.0 },
             {workoutTypes.Aerobic, 0.0 },
@@ -20,7 +22,7 @@ namespace ExerciseCuration.Data
             {workoutTypes.Isometric, 0.0 },
             {workoutTypes.StrengthTraining, 0.0 },
         };
-        private Dictionary<bodyGroup, double> bodyPrefs = new Dictionary<bodyGroup, double>()
+        private readonly Dictionary<bodyGroup, double> bodyPrefs = new Dictionary<bodyGroup, double>()
         {
             {bodyGroup.back, 0.0 },
             {bodyGroup.chest, 0.0 }
@@ -77,7 +79,7 @@ namespace ExerciseCuration.Data
             {
                 workoutType = applicableWorkoutTypes[staticRandom.Instance.Next(0, applicableWorkoutTypes.Count - 1)];
             }
-            Exercise exercise = new Exercise(bodyGroup,workoutType,timeAmounts,amountRange,staticRandom.Instance.Next(exerciseAmount[0],exerciseAmount[1]), difficulty);
+            Exercise exercise = new Exercise(bodyGroup,workoutType,timeAmounts,amountRange,staticRandom.Instance.Next(exerciseAmount[0],exerciseAmount[1]), difficulty, likedExercises, dislikedExercises);
             return exercise;
         }
 
@@ -85,6 +87,18 @@ namespace ExerciseCuration.Data
         {
             workoutPrefs[target.workoutType] += increment*workoutHistory.Where(r => r == target.workoutType).Count();
             bodyPrefs[target.bodyGroup] += increment * bodyGroupHistory.Where(r => r == target.bodyGroup).Count();
+            if(increment > 0)
+            {
+                likedExercises.Add(target);
+            }
+            else
+            {
+                dislikedExercises.Add(target);
+            }
+        }
+        public int getMax()
+        {
+            return exercises.Max(r => r.id);
         }
     }
 }
