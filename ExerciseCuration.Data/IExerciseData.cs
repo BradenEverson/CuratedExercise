@@ -11,5 +11,6 @@ namespace ExerciseCuration.Data
         public Exercise delete(int id);
         public Exercise update(Exercise updatedExercise);
         public Exercise getById(int id);
+        public int commit();
     }
 }
