@@ -111,3 +111,6 @@ C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp
 C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\ExerciseCuration.Data.dll
 C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\ExerciseCuration.Data.pdb
 C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\ExerciseCuration.Core.pdb
+C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\UserClass.Core.dll
+C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\UserClass.Core.pdb
+C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\libman.json

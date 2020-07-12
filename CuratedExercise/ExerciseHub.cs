@@ -1,4 +1,5 @@
-﻿using ExerciseCuration.Data;
+﻿using ExerciseCuration.Core;
+using ExerciseCuration.Data;
 using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,11 @@ namespace CuratedExercise
         }
         public async Task sendExerciseFeedback(string increment)
         {
-            exercises.updateDict(exercises.getById(exercises.getMax()).exercisesInWorkout[exercises.getById(exercises.getMax()).exercisesInWorkout.Count-1], int.Parse(increment));
+            int incrementer = increment == "-1" ? -1 : 1;
+            exercises.updateDict(exercises.getById(exercises.getMax()).exercisesInWorkout[exercises.getById(exercises.getMax()).exercisesInWorkout.Count-1], incrementer);
+            Exercise newExercise = exercises.generateNewWorkout(difficulty.all);
+            exercises.add(newExercise);
+            await Clients.Caller.SendAsync("sendExercise", newExercise.exercisesInWorkout[0].exerciseName, newExercise.exercisesInWorkout[0].instructions);
         }
     }
 }

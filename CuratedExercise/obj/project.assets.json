@@ -1812,13 +1812,27 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "ExerciseCuration.Core": "1.0.0"
+          "ExerciseCuration.Core": "1.0.0",
+          "UserClass.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ExerciseCuration.Data.dll": {}
         },
         "runtime": {
           "bin/placeholder/ExerciseCuration.Data.dll": {}
+        }
+      },
+      "UserClass.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ExerciseCuration.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UserClass.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserClass.Core.dll": {}
         }
       }
     }
@@ -6096,6 +6110,11 @@
       "type": "project",
       "path": "../ExerciseCuration.Data/ExerciseCuration.Data.csproj",
       "msbuildProject": "../ExerciseCuration.Data/ExerciseCuration.Data.csproj"
+    },
+    "UserClass.Core/1.0.0": {
+      "type": "project",
+      "path": "../UserClass.Core/UserClass.Core.csproj",
+      "msbuildProject": "../UserClass.Core/UserClass.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {

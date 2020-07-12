@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ExerciseCuration.Core\ExerciseCuration.Core.csproj" />
+    <ProjectReference Include="..\UserClass.Core\UserClass.Core.csproj" />
   </ItemGroup>
 
 </Project>

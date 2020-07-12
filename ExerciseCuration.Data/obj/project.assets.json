@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/ExerciseCuration.Core.dll": {}
         }
+      },
+      "UserClass.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ExerciseCuration.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UserClass.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserClass.Core.dll": {}
+        }
       }
     }
   },
@@ -19,11 +32,17 @@
       "type": "project",
       "path": "../ExerciseCuration.Core/ExerciseCuration.Core.csproj",
       "msbuildProject": "../ExerciseCuration.Core/ExerciseCuration.Core.csproj"
+    },
+    "UserClass.Core/1.0.0": {
+      "type": "project",
+      "path": "../UserClass.Core/UserClass.Core.csproj",
+      "msbuildProject": "../UserClass.Core/UserClass.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "ExerciseCuration.Core >= 1.0.0"
+      "ExerciseCuration.Core >= 1.0.0",
+      "UserClass.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -62,6 +81,9 @@
           "projectReferences": {
             "C:\\Users\\brade\\source\\repos\\CuratedExercise\\ExerciseCuration.Core\\ExerciseCuration.Core.csproj": {
               "projectPath": "C:\\Users\\brade\\source\\repos\\CuratedExercise\\ExerciseCuration.Core\\ExerciseCuration.Core.csproj"
+            },
+            "C:\\Users\\brade\\source\\repos\\CuratedExercise\\UserClass.Core\\UserClass.Core.csproj": {
+              "projectPath": "C:\\Users\\brade\\source\\repos\\CuratedExercise\\UserClass.Core\\UserClass.Core.csproj"
             }
           }
         }

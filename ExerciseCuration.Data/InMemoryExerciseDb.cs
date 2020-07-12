@@ -36,10 +36,14 @@ namespace ExerciseCuration.Data
         private List<Exercise> exercises { get; set; }
         public InMemoryExerciseDb()
         {
-            exercises = new List<Exercise>();
+            exercises = new List<Exercise>()
+            {
+                new Exercise(workoutTypes.ActiveRecovery,timeAmounts,amountRange,exerciseAmount[0],difficulty.all,likedExercises,dislikedExercises){id=0 }
+            };
         }
         public Exercise add(Exercise exercise)
         {
+            exercise.id =  exercises.Max(r => r.id) + 1;
             exercises.Add(exercise);
             return exercise;
         }
@@ -73,7 +77,7 @@ namespace ExerciseCuration.Data
             List<workoutTypes> applicableWorkoutTypes = workoutPrefs.Keys.Where(r => workoutPrefs[r] > staticRandom.Instance.NextDouble()).ToList();
             //Set defaults if applicableGroups are null
             workoutTypes workoutType = workoutTypes.ActiveRecovery;
-            if(applicableWorkoutTypes != null)
+            if(applicableWorkoutTypes.Count != 0)
             {
                 workoutType = applicableWorkoutTypes[staticRandom.Instance.Next(0, applicableWorkoutTypes.Count - 1)];
             }

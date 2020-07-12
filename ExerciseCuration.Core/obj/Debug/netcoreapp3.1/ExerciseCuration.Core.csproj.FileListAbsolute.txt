@@ -1,7 +1,6 @@
 C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Core\bin\Debug\netcoreapp3.1\ExerciseCuration.Core.deps.json
 C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Core\bin\Debug\netcoreapp3.1\ExerciseCuration.Core.dll
 C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Core\bin\Debug\netcoreapp3.1\ExerciseCuration.Core.pdb
-C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Core\obj\Debug\netcoreapp3.1\ExerciseCuration.Core.csprojAssemblyReference.cache
 C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Core\obj\Debug\netcoreapp3.1\ExerciseCuration.Core.AssemblyInfoInputs.cache
 C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Core\obj\Debug\netcoreapp3.1\ExerciseCuration.Core.AssemblyInfo.cs
 C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Core\obj\Debug\netcoreapp3.1\ExerciseCuration.Core.dll

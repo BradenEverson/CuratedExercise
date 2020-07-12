@@ -105,7 +105,6 @@ namespace ExerciseCuration.Core
             new exerciseSnippet("Intervals", "In interval training, you’ll be varying your running pace. This means you may switch between jogging and walking, or walking and sprinting (there are few different methods of interval training),. This training style can help speed up your metabolism for the hours after you finish.", 1, 1, goal.all, workoutTypes.ActiveRecovery, difficulty.all),
             new exerciseSnippet("Sprinting", "If you like the idea of burning extra calories and building explosive power and speed, check out our article on becoming the Flash. Find a hill, sprint up it, walk down, and repeat the process for 10-20 minutes. No need to overthink it!", 1, 1, goal.all, workoutTypes.ActiveRecovery, difficulty.all),
             new exerciseSnippet("Long Walks", "Walking is a low-impact activity that burns extra calories and doesn’t overly tax your body. What a long walk will be is different for everybody based on their level of fitness, but walking is one of the best things you can do for yourself!", 1, 1, goal.all, workoutTypes.ActiveRecovery, difficulty.all),
-            new exerciseSnippet("Yoga", "Yoga lengthens our muscles and tendons, aids in their recovery, and helps our body develop better mobility and flexibility. It’s the perfect way to create a strong AND mobile body, ready for anything and everything we throw at it.", 1, 1, goal.all, workoutTypes.ActiveRecovery, difficulty.all),
             new exerciseSnippet("Foam Roller", "The important thing for today’s lesson: a rolling massage has been shown to help alleviate muscle soreness. Which means it’s a perfect inclusion for active recovery.", 1, 1, goal.all, workoutTypes.ActiveRecovery, difficulty.all),
             new exerciseSnippet("Bent-Over Press Against Wall", "Start in a low lunge position. Place hands on the wall at about chest level. Lean into the wall and push. The farther down you bend, the more the exercise will target your shoulders. The more you stay upright, the more the exercise will target your chest. Make sure to use 80-90% force for all exercises and to contract for 10 sec each rep. Use 45-60 sec rests between sets.", 2, 1, goal.MaintainWeightTone, workoutTypes.Isometric, difficulty.beginner),
             new exerciseSnippet("Prayer Pose", "Place palms together. Your elbows can be flaring out or pointed toward the ground. Press your hands together. The tighter you press, the harder it will be. Make sure to use 80-90% force for all exercises and to contract for 10 sec each rep. Use 45-60 sec rests between sets.", 2, 1, goal.MaintainWeightTone, workoutTypes.Isometric, difficulty.beginner),
@@ -158,6 +157,7 @@ namespace ExerciseCuration.Core
         public List<exerciseSnippet> exercisesInWorkout { get; }
         public Exercise(workoutTypes workoutType, int[] timeRange, int[] amountRange, int exerciseAmount, difficulty difficulty, List<exerciseSnippet> liked, List<exerciseSnippet> disliked)
         {
+            exercisesInWorkout = new List<exerciseSnippet>();
             for(int i = 0; i < exerciseAmount; i++)
             {
                 generateExercise(workoutType, difficulty, timeRange, amountRange, liked, disliked);
@@ -167,7 +167,7 @@ namespace ExerciseCuration.Core
         {
             List<exerciseSnippet> filteredDownExercises = exercises.Where(r => r.workoutType == workoutType).ToList();
             exerciseSnippet exerciseSnippet = filteredDownExercises[staticRandom.Instance.Next(0, filteredDownExercises.Count - 1)];
-            exerciseSnippet.instructions = exerciseSnippet.instructions.Replace("<time>", staticRandom.Instance.Next(timeRange[0], timeRange[1]).ToString()).Replace("<num>", staticRandom.Instance.Next(amountRange[0], amountRange[1]).ToString());
+            exerciseSnippet.instructions = exerciseSnippet.instructions.Replace("<time>", staticRandom.Instance.Next(timeRange[0], timeRange[1]).ToString()).Replace("<num>", staticRandom.Instance.Next(amountRange[0], amountRange[1]).ToString()).Replace("),",")");
             if (disliked.Contains(exerciseSnippet))
             {
                 exercisesInWorkout.Add(liked[staticRandom.Instance.Next(0, liked.Count - 1)]);

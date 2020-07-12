@@ -1546,13 +1546,25 @@
       },
       "ExerciseCuration.Data/1.0.0": {
         "dependencies": {
-          "ExerciseCuration.Core": "1.0.0"
+          "ExerciseCuration.Core": "1.0.0",
+          "UserClass.Core": "1.0.0"
         },
         "runtime": {
           "ExerciseCuration.Data.dll": {}
         },
         "compile": {
           "ExerciseCuration.Data.dll": {}
+        }
+      },
+      "UserClass.Core/1.0.0": {
+        "dependencies": {
+          "ExerciseCuration.Core": "1.0.0"
+        },
+        "runtime": {
+          "UserClass.Core.dll": {}
+        },
+        "compile": {
+          "UserClass.Core.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4010,6 +4022,11 @@
       "sha512": ""
     },
     "ExerciseCuration.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UserClass.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

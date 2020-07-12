@@ -4,5 +4,13 @@
     ViewData["Title"] = "exercise";
 }
 
-<h1>exercise</h1>
+<h1 id="Name">@Model.currentExercise.exercisesInWorkout[0].exerciseName</h1>
+<h2 id="Instructions">@Model.currentExercise.exercisesInWorkout[0].instructions</h2>
+<button id="positive" type="submit">Liked</button>
+<button id="negative" type="submit">Disliked</button>
+<form method="post">
+    <button type="submit">End Workout Session</button>
+</form>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/ratingManager.js"></script>
 

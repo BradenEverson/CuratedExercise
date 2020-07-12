@@ -11,10 +11,14 @@ namespace ExerciseCuration.Data
         readonly List<User> users;
         public InMemoryUserDb()
         {
-            users = new List<User>();
+            users = new List<User>()
+            {
+                new User{id=0}
+            };
         }
         public User add(User user)
         {
+            user.id = users.Max(r => r.id) + 1;
             users.Add(user);
             return user;
         }

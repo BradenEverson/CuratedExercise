@@ -54,7 +54,7 @@ namespace CuratedExercise
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-                endpoints.MapHub<ExerciseHub>("ExcerciseHub");
+                endpoints.MapHub<ExerciseHub>("/ExerciseHub");
             });
         }
     }

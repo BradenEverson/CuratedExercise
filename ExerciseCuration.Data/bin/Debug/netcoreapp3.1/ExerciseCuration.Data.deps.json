@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "ExerciseCuration.Data/1.0.0": {
         "dependencies": {
-          "ExerciseCuration.Core": "1.0.0"
+          "ExerciseCuration.Core": "1.0.0",
+          "UserClass.Core": "1.0.0"
         },
         "runtime": {
           "ExerciseCuration.Data.dll": {}
@@ -17,6 +18,14 @@
       "ExerciseCuration.Core/1.0.0": {
         "runtime": {
           "ExerciseCuration.Core.dll": {}
+        }
+      },
+      "UserClass.Core/1.0.0": {
+        "dependencies": {
+          "ExerciseCuration.Core": "1.0.0"
+        },
+        "runtime": {
+          "UserClass.Core.dll": {}
         }
       }
     }
@@ -28,6 +37,11 @@
       "sha512": ""
     },
     "ExerciseCuration.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UserClass.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -9,3 +9,5 @@ C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netc
 C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netcoreapp3.1\ExerciseCuration.Data.csproj.CopyComplete
 C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netcoreapp3.1\ExerciseCuration.Data.dll
 C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\obj\Debug\netcoreapp3.1\ExerciseCuration.Data.pdb
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\bin\Debug\netcoreapp3.1\UserClass.Core.dll
+C:\Users\brade\source\repos\CuratedExercise\ExerciseCuration.Data\bin\Debug\netcoreapp3.1\UserClass.Core.pdb
