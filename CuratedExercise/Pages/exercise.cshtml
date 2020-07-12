@@ -3,14 +3,175 @@
 @{
     ViewData["Title"] = "exercise";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Workout Mode</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-<h1 id="Name">@Model.currentExercise.exercisesInWorkout[0].exerciseName</h1>
-<h2 id="Instructions">@Model.currentExercise.exercisesInWorkout[0].instructions</h2>
-<button id="positive" type="submit">Liked</button>
-<button id="negative" type="submit">Disliked</button>
-<form method="post">
-    <button type="submit">End Workout Session</button>
-</form>
-<script src="~/lib/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/ratingManager.js"></script>
+<body>
+    <div id="container">
 
+
+
+        <div id="nav-bar">
+            <div id="logo">
+                <img src="curvedlogo1.png">
+            </div>
+            <div id="nav-icons">
+                <ul>
+                    <a href=""><li>Home</li></a>
+                    <!Link to the specified location(NAV ICONS)>
+                    <a href=""><li>Workout Mode</li></a>
+                    <a href=""><li>Login/Signup</li></a>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div id="workout-section">
+            <h1 id="Name" class="extext">@Model.currentExercise.exercisesInWorkout[0].exerciseName</h1>
+            <h2 id="Instructions" class="extext">@Model.currentExercise.exercisesInWorkout[0].instructions</h2>
+            <br />
+            <br />
+            <div class="center">
+                <button id="positive" type="submit" class='button'>Like</button>
+                <button id="negative" type="submit" class='button'>Dislike</button>
+            </div>
+            <br />
+            <br<
+            <form method="post">
+                <button type="submit" class='button' id='end'>End Workout Session</button>
+            </form>
+            <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+            <script src="~/js/ratingManager.js"></script>
+        </div>
+
+
+
+
+        <div id="footer">
+            <hr width=10px>
+            <p><b>@@2020 trAIner inc.</b></p>
+
+        </div>
+    </div>
+
+
+
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/ratingManager.js"></script>
+
+    <script src="" async defer></script>
+    <style>
+        html{
+    background-color: white;
+}
+
+.center{
+    align-content: center;
+}
+#nav-bar{
+    background-color: black;
+    margin:0px;
+    padding:0px;
+}
+
+a{
+    color: #ffff;
+    text-decoration: none;
+}
+
+#nav-icons li{
+    display: inline;
+    font-family: Lucida Console;
+    font-size: 20px;
+    margin: 10px;
+    padding: 20px;
+}
+
+#nav-icons{
+    position: absolute;
+    right: 25px;
+    padding: 10px;
+    top: 50px;
+}
+
+#logo img{
+    position: relative;
+    width: 5%;
+    padding: 10px 10px 10px;
+}
+
+#nav-icons a:active{color:#ffff);}
+#nav-icons a:visited{color:#ffff);}
+#nav-icons a:hover{color:rgba(196, 189, 189, 0.925);}
+#nav-icons a:focus{color:#ffff);}
+#nav-icons a:link{color:#ffff;}
+
+#footer{
+    background-color:#2D70B6;
+    height:15%;
+    position: relative;
+    
+}
+
+#container{
+    margin:0px;
+    padding:0px;
+}
+
+hr{
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    top: 25px;
+    border: none;
+    height: 3px;
+}
+
+#footer p{
+    position: absolute;
+    font-weight: 500;
+    top: 40px;
+    right: 35px;
+}
+
+.button {
+    background-color: #1d9be4; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'monospace';
+    margin-left:50px;
+    margin-right:50px;
+}
+.button {
+    transition-duration: 0.4s;
+
+}
+.button:hover {
+    color: white;
+}
+
+#end{
+    background-color: bisque;
+    color: black;
+    position: relative;
+}
+
+
+    </style>
+</body>
+
+</html>
