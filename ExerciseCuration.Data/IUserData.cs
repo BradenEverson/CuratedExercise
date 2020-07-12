@@ -10,6 +10,7 @@ namespace ExerciseCuration.Data
     {
         public User add(User user);
         public User delete(int id);
+        public User getByEmail(string email);
         public User getById(int id);
         public User update(User updatedUser);
         public int commit();

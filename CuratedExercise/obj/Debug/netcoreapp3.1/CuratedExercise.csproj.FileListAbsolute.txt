@@ -114,3 +114,5 @@ C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp
 C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\UserClass.Core.dll
 C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\UserClass.Core.pdb
 C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\obj\Debug\netcoreapp3.1\Razor\Pages\LogIn.cshtml.g.cs
+C:\Users\brade\source\repos\CuratedExercise\CuratedExercise\obj\Debug\netcoreapp3.1\Razor\Pages\Create.cshtml.g.cs

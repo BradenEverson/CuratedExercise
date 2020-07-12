@@ -63,5 +63,10 @@ namespace ExerciseCuration.Data
             }
             return user;
         }
+        public User getByEmail(string email)
+        {
+            User user = users.FirstOrDefault(r => r.email == email);
+            return user;
+        }
     }
 }

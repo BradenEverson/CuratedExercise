@@ -11,8 +11,8 @@ namespace ExerciseCuration.Data
         public int[] timeAmounts = { 15, 60 };
         public int[] amountRange = { 5, 30};
         public int[] exerciseAmount = { 5, 10 };
-        private List<exerciseSnippet> likedExercises = new List<exerciseSnippet>();
-        private List<exerciseSnippet> dislikedExercises = new List<exerciseSnippet>();
+        private readonly List<exerciseSnippet> likedExercises = new List<exerciseSnippet>();
+        private readonly List<exerciseSnippet> dislikedExercises = new List<exerciseSnippet>();
         /*
         Cardio,
         Aerobic,
@@ -90,13 +90,13 @@ namespace ExerciseCuration.Data
             Console.WriteLine(increment);
             workoutHistory.Add(target.workoutType);
             workoutPrefs[target.workoutType] += increment == 0.02 ? workoutPrefs[target.workoutType] == 0.0 ? 0.0 : -0.01 : 0.01;
-            if(increment == 0.02)
-            if(increment > 0)
+            if(increment > 0.02)
             {
                 likedExercises.Add(target);
             }
             else
             {
+                likedExercises.Remove(target);
                 dislikedExercises.Add(target);
             }
             foreach(var key in workoutPrefs.Keys)

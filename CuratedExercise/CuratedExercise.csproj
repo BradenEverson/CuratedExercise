@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\index %25281%2529_files\**" />
+    <Content Remove="wwwroot\index %25281%2529_files\**" />
+    <EmbeddedResource Remove="wwwroot\index %25281%2529_files\**" />
+    <None Remove="wwwroot\index %25281%2529_files\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
   </ItemGroup>
 
