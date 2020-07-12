@@ -22,12 +22,6 @@ namespace ExerciseCuration.Data
             {workoutTypes.Isometric, 0.0 },
             {workoutTypes.StrengthTraining, 0.0 },
         };
-        private readonly Dictionary<bodyGroup, double> bodyPrefs = new Dictionary<bodyGroup, double>()
-        {
-            {bodyGroup.back, 0.0 },
-            {bodyGroup.chest, 0.0 }
-        };
-        public List<bodyGroup> bodyGroupHistory = new List<bodyGroup>();
         public List<workoutTypes> workoutHistory = new List<workoutTypes>();
         private List<Exercise> exercises { get; set; }
         public InMemoryExerciseDb()
@@ -66,15 +60,10 @@ namespace ExerciseCuration.Data
 
         public Exercise generateNewWorkout(difficulty difficulty)
         {
-            List<bodyGroup> applicableBodyGroups = bodyPrefs.Keys.Where(r => bodyPrefs[r] > staticRandom.Instance.NextDouble()).ToList();
             List<workoutTypes> applicableWorkoutTypes = workoutPrefs.Keys.Where(r => workoutPrefs[r] > staticRandom.Instance.NextDouble()).ToList();
             //Set defaults if applicableGroups are null
             bodyGroup bodyGroup = bodyGroup.back;
             workoutTypes workoutType = workoutTypes.ActiveRecovery;
-            if(applicableBodyGroups != null)
-            {
-                bodyGroup = applicableBodyGroups[staticRandom.Instance.Next(0, applicableBodyGroups.Count - 1)];
-            }
             if(applicableWorkoutTypes != null)
             {
                 workoutType = applicableWorkoutTypes[staticRandom.Instance.Next(0, applicableWorkoutTypes.Count - 1)];
@@ -85,8 +74,7 @@ namespace ExerciseCuration.Data
 
         public void updateDict(exerciseSnippet target, double increment)
         {
-            workoutPrefs[target.workoutType] += increment*workoutHistory.Where(r => r == target.workoutType).Count();
-            //bodyPrefs[target.bodyGroup] += increment * bodyGroupHistory.Where(r => r == target.bodyGroup).Count();
+            workoutPrefs[target.workoutType] += workoutPrefs[target.workoutType] == 0.0 && increment < 0.0 ? increment * workoutHistory.Where(r => r == target.workoutType).Count() : 0;
             if(increment > 0)
             {
                 likedExercises.Add(target);

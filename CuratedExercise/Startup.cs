@@ -27,6 +27,7 @@ namespace CuratedExercise
             services.AddRazorPages();
             services.AddSignalR();
             services.AddSingleton<IExerciseData, InMemoryExerciseDb>();
+            services.AddSingleton<IUserData,InMemoryUserDb>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
