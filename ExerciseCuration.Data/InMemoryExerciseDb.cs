@@ -13,14 +13,24 @@ namespace ExerciseCuration.Data
         public int[] exerciseAmount = { 5, 10 };
         private List<exerciseSnippet> likedExercises = new List<exerciseSnippet>();
         private List<exerciseSnippet> dislikedExercises = new List<exerciseSnippet>();
+        /*
+        Cardio,
+        Aerobic,
+        ActiveRecovery,
+        StrengthTraining,
+        HIIT,
+        Isometric,
+        Plyometric
+         */
         private readonly Dictionary<workoutTypes, double> workoutPrefs = new Dictionary<workoutTypes, double>()
         {
-            {workoutTypes.ActiveRecovery, 0.0 },
+            {workoutTypes.Cardio, 0.0 },
             {workoutTypes.Aerobic, 0.0 },
-            {workoutTypes.Anaerobic, 0.0 },
-            {workoutTypes.Circuit, 0.0 },
-            {workoutTypes.Isometric, 0.0 },
+            {workoutTypes.ActiveRecovery, 0.0 },
             {workoutTypes.StrengthTraining, 0.0 },
+            {workoutTypes.HIIT, 0.0 },
+            {workoutTypes.Isometric, 0.0 },
+            {workoutTypes.Plyometric, 0.0 },
         };
         public List<workoutTypes> workoutHistory = new List<workoutTypes>();
         private List<Exercise> exercises { get; set; }
@@ -62,13 +72,12 @@ namespace ExerciseCuration.Data
         {
             List<workoutTypes> applicableWorkoutTypes = workoutPrefs.Keys.Where(r => workoutPrefs[r] > staticRandom.Instance.NextDouble()).ToList();
             //Set defaults if applicableGroups are null
-            bodyGroup bodyGroup = bodyGroup.back;
             workoutTypes workoutType = workoutTypes.ActiveRecovery;
             if(applicableWorkoutTypes != null)
             {
                 workoutType = applicableWorkoutTypes[staticRandom.Instance.Next(0, applicableWorkoutTypes.Count - 1)];
             }
-            Exercise exercise = new Exercise(bodyGroup,workoutType,timeAmounts,amountRange,staticRandom.Instance.Next(exerciseAmount[0],exerciseAmount[1]), difficulty, likedExercises, dislikedExercises);
+            Exercise exercise = new Exercise(workoutType,timeAmounts,amountRange,staticRandom.Instance.Next(exerciseAmount[0],exerciseAmount[1]), difficulty, likedExercises, dislikedExercises);
             return exercise;
         }
 
