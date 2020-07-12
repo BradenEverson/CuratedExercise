@@ -7,8 +7,8 @@
 <h1>Log in or sign up</h1>
 <div>
     <form method="post">
-        <input type="email" placeholder="Email"/>
-        <input type="password" placeholder="Password"/>
+        <input type="email" placeholder="Email" asp-for="@Model.email"/>
+        <input type="password" placeholder="Password" asp-for="@Model.password"/>
         <button type="submit">Log in or create account</button>
     </form>
 </div>

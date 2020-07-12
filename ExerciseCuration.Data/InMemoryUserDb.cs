@@ -13,7 +13,7 @@ namespace ExerciseCuration.Data
         {
             users = new List<User>()
             {
-                new User{id=0}
+                new User{id=0, email="bradeneverson@gmail.com",password="123456789"}
             };
         }
         public User add(User user)
