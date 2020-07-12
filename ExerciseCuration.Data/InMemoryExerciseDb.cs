@@ -74,7 +74,7 @@ namespace ExerciseCuration.Data
 
         public Exercise generateNewWorkout(difficulty difficulty)
         {
-            List<workoutTypes> applicableWorkoutTypes = workoutPrefs.Keys.Where(r => workoutPrefs[r] > staticRandom.Instance.NextDouble()).ToList();
+            List<workoutTypes> applicableWorkoutTypes = workoutPrefs.Keys.Where(r => workoutPrefs[r] < staticRandom.Instance.NextDouble()).ToList();
             //Set defaults if applicableGroups are null
             workoutTypes workoutType = workoutTypes.ActiveRecovery;
             if(applicableWorkoutTypes.Count != 0)
@@ -87,7 +87,10 @@ namespace ExerciseCuration.Data
 
         public void updateDict(exerciseSnippet target, double increment)
         {
-            workoutPrefs[target.workoutType] += workoutPrefs[target.workoutType] == 0.0 && increment < 0.0 ? increment * workoutHistory.Where(r => r == target.workoutType).Count() : 0;
+            Console.WriteLine(increment);
+            workoutHistory.Add(target.workoutType);
+            workoutPrefs[target.workoutType] += increment == 0.02 ? workoutPrefs[target.workoutType] == 0.0 ? 0.0 : -0.01 : 0.01;
+            if(increment == 0.02)
             if(increment > 0)
             {
                 likedExercises.Add(target);
@@ -95,6 +98,10 @@ namespace ExerciseCuration.Data
             else
             {
                 dislikedExercises.Add(target);
+            }
+            foreach(var key in workoutPrefs.Keys)
+            {
+                Console.WriteLine(key + ": " + workoutPrefs[key]);
             }
         }
         public int getMax()

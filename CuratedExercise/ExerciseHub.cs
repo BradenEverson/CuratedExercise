@@ -17,7 +17,7 @@ namespace CuratedExercise
         }
         public async Task sendExerciseFeedback(string increment)
         {
-            int incrementer = increment == "-1" ? -1 : 1;
+            double incrementer = increment == "-1" ? 0.02 : 0.01;
             exercises.updateDict(exercises.getById(exercises.getMax()).exercisesInWorkout[exercises.getById(exercises.getMax()).exercisesInWorkout.Count-1], incrementer);
             Exercise newExercise = exercises.generateNewWorkout(difficulty.all);
             exercises.add(newExercise);

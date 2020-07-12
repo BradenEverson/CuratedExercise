@@ -18,13 +18,13 @@ connection.start().then(function () {
 });
 
 document.getElementById("positive").addEventListener("click", function (event) {
-    connection.invoke("sendExerciseFeedback", "0.1").catch(function (err) {
+    connection.invoke("sendExerciseFeedback", "-1").catch(function (err) {
         return console.error(err.toString());
     });
     event.preventDefault();
 });
 document.getElementById("negative").addEventListener("click", function (event) {
-    connection.invoke("sendExerciseFeedback", "-0.1").catch(function (err) {
+    connection.invoke("sendExerciseFeedback", "1").catch(function (err) {
         return console.error(err.toString());
     });
     event.preventDefault();

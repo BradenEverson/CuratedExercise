@@ -165,7 +165,7 @@ namespace ExerciseCuration.Core
         }
         private void generateExercise(workoutTypes workoutType, difficulty difficulty, int[] timeRange, int[] amountRange, List<exerciseSnippet> liked, List<exerciseSnippet> disliked)
         {
-            List<exerciseSnippet> filteredDownExercises = exercises.Where(r => r.workoutType == workoutType).ToList();
+            List<exerciseSnippet> filteredDownExercises = exercises.Where(r => r.workoutType == workoutType || r.goal == goal.all).ToList();
             exerciseSnippet exerciseSnippet = filteredDownExercises[staticRandom.Instance.Next(0, filteredDownExercises.Count - 1)];
             exerciseSnippet.instructions = exerciseSnippet.instructions.Replace("<time>", staticRandom.Instance.Next(timeRange[0], timeRange[1]).ToString()).Replace("<num>", staticRandom.Instance.Next(amountRange[0], amountRange[1]).ToString()).Replace("),",")");
             if (disliked.Contains(exerciseSnippet))
